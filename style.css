@@ -10,3 +10,40 @@ body{
 img{
     border: 3px solid #032c2c
 }
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 150px;
+  background: #2b575a6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(transparent, transparent, transparent, #b700ff);
+  animation: girar 4s linear infinite;
+}
+
+.conteudo {
+  position: absolute;
+  inset: 4px;
+  background: #22222242;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
