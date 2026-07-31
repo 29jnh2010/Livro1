@@ -13,9 +13,9 @@ img{
 
 .card {
   position: relative;
-  width: 400px;
-  height: 150px;
-  background: #2b575a6b;
+  width: 500px;
+  height: 200px;
+  background: #9966ebf1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,22 +28,35 @@ img{
   position: absolute;
   width: 400%;
   height: 400%;
-  background: conic-gradient(transparent, transparent, transparent, #b700ff);
+  background: conic-gradient(transparent, transparent, transparent, #9f12d6);
   animation: girar 4s linear infinite;
 }
 
-.conteudo {
+.card::after {
+  content: '';
   position: absolute;
-  inset: 4px;
-  background: #22222242;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  inset: 3px;
 }
 
 @keyframes girar {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.container-flex{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+
+}
+.card {
+  background-color: #4601a0;
+  color: #e205ff;
+  padding: 20px;
+  border-radius: 8px;
+  transition: background-color 0.4s ease; /* Tempo da animação */
+}
+
+.card:hover {
+  background-color: #82019c; /* Cor final vermelha ao passar o mouse */
 }
